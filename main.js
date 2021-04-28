@@ -10,6 +10,12 @@ surname_list.sort();
 for (var i = 0; i < surname_list.length; i++) {
     var li = document.getElementById("surnamelist");
     li.innerHTML = li.innerHTML + "<li>" + surname_list[i] + "</li>";
+
+    var sur_position;
+    if (surname_list[i] == surname) {
+        sur_position = i + 1;
+    }
 }
 
 //4. scrivi anche la posizione "umana"(partendo da 1) della lista in cui il nuovo utente si trova
+document.getElementById("position").innerHTML = "La posizione del tuo cognome è la: " + sur_position + "a";
